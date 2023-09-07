@@ -1,11 +1,11 @@
 # Setup
 title: kamillee0918's Blog
-description: 파이썬 백엔드 개발자를 꿈꾸고 있습니다.
+description: 백엔드 개발자를 꿈꾸고 있습니다.
 url: https://kamillee0918.github.io
-avatar: /avatar.jpg
+avatar: /Avatar.jpg
 paginate: 5
 permalink: pretty
-cover_image: /wallpaper.png
+cover_image: /bg.jpeg
 
 # Gems
 plugins:
