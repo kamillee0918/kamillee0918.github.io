@@ -1,11 +1,11 @@
 # Setup
-title: Not Pure Poole
-description: A simple, beautiful, and powerful Jekyll theme for blogs
-url: https://vszhub.github.io
-avatar: /avatar.jpeg
+title: kamillee0918's Blog
+description: 파이썬 백엔드 개발자를 꿈꾸고 있습니다.
+url: https://kamillee0918.github.io
+avatar: /avatar.jpg
 paginate: 5
 permalink: pretty
-cover_image: /bg.jpeg
+cover_image: /wallpaper.png
 
 # Gems
 plugins:
@@ -29,14 +29,13 @@ exclude:
 
 # Optimize Jekyl SEO Tag
 twitter:
-  username: vszhub
+  username: kamillee0918
   card: summary
 logo: logo.png
 social:
-  name: Songzi Vong
+  name: Minjae Lee
   links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
+    - https://github.com/kamillee0918
 google_site_verification: xxxxx
 lang: en
 
@@ -54,6 +53,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: Minjae Lee
+  url: https://github.com/kamillee0918/
+  email: kamillee0918@gmail.com
