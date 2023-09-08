@@ -17,12 +17,8 @@ title: About
 
 <p align="center">☕ 네스프레소 커피를 누구보다 사랑합니다.</p><br>
 
-<h2>
-    <p align="center">Contact<p>
-</h2>
+<h2><p align="center">Contact<p></h2>
 
-<div>
-    <p><b>E-mail</b> | parousia0918@gmail.com</p>
-    <p><b>GitHub</b> | https://github.com/kamillee0918</p>
-    <p><b>Blog</b> | https://www.notion.so/71c444a32b464e35bfb9940e3698658a</p>
-</div>
+<p><b>E-mail</b> | parousia0918@gmail.com</p>
+<p><b>GitHub</b> | https://github.com/kamillee0918</p>
+<p><b>Blog</b> | https://www.notion.so/71c444a32b464e35bfb9940e3698658a</p>
