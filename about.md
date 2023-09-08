@@ -17,7 +17,7 @@ title: About
 
 <p align="center">☕ 네스프레소 커피를 누구보다 사랑합니다.</p><br>
 
-<p align="center"><h3>Contact</h3><p>
+<p align="center">Contact<p>
 
 <p><b>E-mail</b> | parousia0918@gmail.com</p>
 <p><b>GitHub</b> | https://github.com/kamillee0918</p>
