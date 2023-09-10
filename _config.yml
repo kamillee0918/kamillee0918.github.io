@@ -1,9 +1,9 @@
 # Setup
-title: kamillee0918's Blog
-description: 백엔드 개발자를 꿈꾸고 있습니다.
+title: Kamil Lee의 인공지능 이야기
+description: 인공지능은 아마도 딥러닝을 통해 인간으로부터 윤리관을 배우리라.
 url: https://kamillee0918.github.io
 avatar: /Avatar.jpg
-paginate: 5
+paginate: 10
 permalink: pretty
 cover_image: /bg.jpeg
 
@@ -38,7 +38,7 @@ lang: en
 
 sass:
   sass_dir: _sass
-  style: :compressed
+  style: compressed
 
 # Options
 
@@ -46,13 +46,10 @@ sass:
 # google_analytics: UA-000000-0
 
 # Replace this value and uncomment to enable Disqus
-# disqus: xxxxxx
+disqus: "kamillee0918-github-io"
 
 # Specify the author for blog posts
 author:
   name: kamillee0918
   url: https://github.com/kamillee0918/
   email: parousia0918@gmail.com
-
-# Plugins
-disqus: "kamillee0918-github-io"
