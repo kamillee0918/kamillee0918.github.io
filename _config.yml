@@ -33,8 +33,8 @@ social:
   name: kamillee0918
   links:
     - https://github.com/kamillee0918
-google_site_verification: xxxxx
-lang: en
+# google_site_verification: google04d96c1389a00d91.html  # HTML 파일 방식 사용 시 주석 처리
+lang: ko
 
 sass:
   sass_dir: _sass
@@ -42,8 +42,8 @@ sass:
 
 # Options
 
-# Replace this value and uncomment to enable Google Analytics tracking
-# google_analytics: UA-000000-0
+# Google Analytics tracking
+google_analytics: G-QMW2B664KQ
 
 # Replace this value and uncomment to enable Disqus
 disqus: "kamillee0918-github-io"
