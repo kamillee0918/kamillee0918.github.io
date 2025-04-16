@@ -31,7 +31,6 @@ comments: true
   if jekyll.environment == "production" and site.disqus and page.comments !=
   false %} {% include disqus.html %} {% endif %}
 
-  {% include social-share.html %}
 </article>
 
 {% if site.related_posts != empty %}
@@ -53,5 +52,3 @@ comments: true
   </ul>
 </aside>
 {% endif %}
-
-{% include newsletter.html %}

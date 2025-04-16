@@ -2,10 +2,10 @@
 title: Kamil Lee의 인공지능 이야기
 description: 인공지능은 아마도 딥러닝을 통해 인간으로부터 윤리관을 배우리라.
 url: https://kamillee0918.github.io
-avatar: /Avatar.jpg
+avatar: /avatar.png
 paginate: 10
 permalink: pretty
-cover_image: /bg.jpeg
+cover_image: /bg.jpg
 
 # Gems
 plugins:
@@ -14,6 +14,28 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-minifier
+
+# Minifier settings
+minifier:
+  css: true
+  html: true
+  js: true
+  remove_comments: true
+  remove_whitespace: true
+  remove_newlines: true
+  remove_emptyattributes: true
+  remove_quotes: true
+  remove_script_attributes: true
+  remove_style_attributes: true
+  remove_link_attributes: true
+  remove_form_attributes: true
+  remove_input_attributes: true
+  remove_javascript_protocol: true
+  remove_http_protocol: false
+  remove_https_protocol: false
+  remove_http_www_protocol: false
+  remove_https_www_protocol: false
 
 # Optimize Jekyll
 exclude:
