@@ -36,6 +36,8 @@ minifier:
   remove_https_protocol: false
   remove_http_www_protocol: false
   remove_https_www_protocol: false
+  uglifier:
+    harmony: true
 
 # Optimize Jekyll
 exclude:
