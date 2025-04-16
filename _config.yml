@@ -38,6 +38,9 @@ minifier:
   remove_https_www_protocol: false
   uglifier:
     harmony: true
+    compress:
+      harmony: true
+      ecma: 6
 
 # Optimize Jekyll
 exclude:
