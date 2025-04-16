@@ -28,8 +28,9 @@ jobs:
       - name: Build with Jekyll
         run: bundle exec jekyll build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
+          name: _site
           path: ./_site
 
   deploy:
