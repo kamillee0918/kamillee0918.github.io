@@ -19,16 +19,16 @@
     sessionStorage.removeItem('forceCheckScroll');
   }
 
-  const forceCheckScroll = sessionStorage.getItem('forceCheckScroll') === 'true';
-  const checkScroll = strip(window.location.pathname, '/') !== strip('{{ site.baseurl }}', '/');
+  var forceCheckScroll = sessionStorage.getItem('forceCheckScroll') === 'true';
+  var checkScroll = strip(window.location.pathname, '/') !== strip('{{ site.baseurl }}', '/');
 
   if (forceCheckScroll || checkScroll) {
-    const maxWidth = "(max-width: 48rem)";
-    const result = window.matchMedia(maxWidth);
+    var maxWidth = "(max-width: 48rem)";
+    var result = window.matchMedia(maxWidth);
     if (result.matches) {
       scroll();
     } else {
-      result.addListener((match) => {
+      result.addListener(function(match) {
         if (match.media == maxWidth) {
           if (match.matches) {
             scroll();
