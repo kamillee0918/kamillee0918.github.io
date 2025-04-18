@@ -1,8 +1,8 @@
 ---
 layout: post
 title: 영어 논문 번역 Tips
-date: 2023-09-10 16:13 +0800
-last_modified_at: 2023-09-10 17:50 +0800
+date: 2023-09-10
+last_modified_at: 2025-04-18
 tags: [paper, translate]
 toc: true
 ---

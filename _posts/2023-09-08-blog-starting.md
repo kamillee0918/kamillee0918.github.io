@@ -1,8 +1,8 @@
 ---
 layout: post
 title: github 블로그 시작했습니다.
-date: 2023-09-08 09:51 +0800
-last_modified_at: 2023-09-08 10:07 +0800
+date: 2023-09-08
+last_modified_at: 2025-04-18
 tags: [start]
 toc: true
 ---

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: elmo 어필 문서를 읽은 후
-date: 2023-09-10 18:16 +0800
-last_modified_at: 2023-09-10 18:16 +0800
+date: 2023-09-10
+last_modified_at: 2025-04-18
 tags: [shogi, machine-learning]
 math: true
 toc: true
