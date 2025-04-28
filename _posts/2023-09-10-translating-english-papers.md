@@ -3,7 +3,7 @@ layout: post
 title: 영어 논문 번역 Tips
 date: 2023-09-10
 last_modified_at: 2025-04-18
-tags: [paper, translate]
+tags: [논문, 번역]
 toc: true
 ---
 
