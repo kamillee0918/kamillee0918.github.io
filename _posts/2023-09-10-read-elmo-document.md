@@ -3,7 +3,7 @@ layout: post
 title: elmo 어필 문서를 읽은 후
 date: 2023-09-10
 last_modified_at: 2025-04-18
-tags: [shogi, machine-learning]
+tags: [일본장기, 머신러닝]
 math: true
 toc: true
 githubRepo: mk-takizawa/elmo_for_learn
