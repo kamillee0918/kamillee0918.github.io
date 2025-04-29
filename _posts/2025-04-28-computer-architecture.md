@@ -24,7 +24,7 @@ toc: true
 
 이번시간에는 컴퓨터 아키텍처에서 CPU의 주요 구성 요소 프로그램 카운터(PC), 레지스터, 상태 코드를 살펴보도록 하겠습니다. 이어서 컴파일 과정에 대해 살펴볼 것이며, 또 마지막으로 어셈블리 언어와 명령어 실행을 컴파일러에 의해 최적화가 수행되는 과정까지 이어질 것입니다. 이러한 과정들을 이해함으로써 컴퓨터 시스템의 작동 원리를 깊이 있게 파악할 수 있을 것입니다.
 
-![computer_architecture.png](../images/posts/computer_architecture.png)
+![computer_architecture.png](/images/posts/computer_architecture.png)
 
 ## 1. ⚙ CPU {#cpu}
 
