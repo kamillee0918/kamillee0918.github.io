@@ -44,3 +44,6 @@ node_modules
 
 # Ruby gems
 *.gem
+
+# windsurf rules
+.windsurfrules

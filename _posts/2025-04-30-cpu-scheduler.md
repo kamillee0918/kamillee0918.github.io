@@ -20,7 +20,7 @@ toc: true
   - [다단계 큐 (Multilevel Queue)](#multilevel-queue)
 - [4. 🏁 마치며](#conclusion)
 
-![cpu_scheduler_1.png](/images/posts/cpu_scheduler_1.png)
+![cpu_scheduler_1.png](/images/posts/2025-04-30-cpu-scheduler/cpu_scheduler_1.png)
 
 ## 1. ⚙ CPU 스케줄링 개요 {#cpu-scheduling-overview}
 
@@ -31,7 +31,7 @@ toc: true
 - CPU burst duration은 일반적으로 밀리초 단위이며, CPU bound 작업과 I/O bound 작업이 존재합니다.
 - CPU 스케줄러는 단기 스케줄러(short-term scheduler)라고도 불립니다.
 
-![cpu_scheduler_2.png](/images/posts/cpu_scheduler_2.png)
+![cpu_scheduler_2.png](/images/posts/2025-04-30-cpu-scheduler/cpu_scheduler_2.png)
 
 ### 스케줄링의 역할과 작동 시점 {#scheduling-role-timing}
 
@@ -42,7 +42,7 @@ toc: true
 - 스케줄링은 선점형(preemptive)과 비선점형(non-preemptive)으로 나뉘며, 인터럽트나 커널 모드에서 선점이 고려됩니다.
 - 프로세스 상태 변화에 따른 스케줄링 흐름도는 다음과 같습니다:
 
-![cpu_scheduler_3.png](/images/posts/cpu_scheduler_3.png)
+![cpu_scheduler_3.png](/images/posts/2025-04-30-cpu-scheduler/cpu_scheduler_3.png)
 
 이 중 1번과 4번 전환 시 선점형 스케줄링이 발생합니다.
 
@@ -53,7 +53,7 @@ toc: true
 - **컨텍스트 스위칭**은 현재 실행 중인 프로세스의 상태를 저장하고, 새 프로세스의 상태를 복원하는 과정으로, 사용자 모드 전환과 프로그램 재시작 위치 점프를 포함합니다.
 - 컨텍스트 스위칭은 시스템 오버헤드를 발생시킵니다.
 
-![cpu_scheduler_4.png](/images/posts/cpu_scheduler_4.png)
+![cpu_scheduler_4.png](/images/posts/2025-04-30-cpu-scheduler/cpu_scheduler_4.png)
 
 ## 2. ⚙ 주요 스케줄링 알고리즘 {#scheduling-algorithms}
 
@@ -63,7 +63,7 @@ toc: true
 - 단점으로는 긴 작업이 앞에 있으면 뒤에 있는 짧은 작업들이 대기하는 ‘호위 효과(Convoy Effect)’가 발생합니다.
 - 이를 해결하기 위해 뒤에 소개할 SJF나 Round Robin 알고리즘이 사용됩니다.
 
-![cpu_scheduler_5.png](/images/posts/cpu_scheduler_5.png)
+![cpu_scheduler_5.png](/images/posts/2025-04-30-cpu-scheduler/cpu_scheduler_5.png)
 
 ### SJF (Shortest Job First) {#sjf}
 
@@ -71,7 +71,7 @@ toc: true
 - 이론적으로 평균 대기 시간을 최소화하지만, 긴 작업이 계속 대기하는 기아 현상(Starvation)이 발생할 수 있습니다.
 - 실행 시간 예측이 어려운 문제는 과거 실행 시간을 기반으로 한 예측 알고리즘으로 해결합니다.
 
-![cpu_scheduler_6.png](/images/posts/cpu_scheduler_6.png)
+![cpu_scheduler_6.png](/images/posts/2025-04-30-cpu-scheduler/cpu_scheduler_6.png)
 
 ### 라운드 로빈 (Round Robin) {#round-robin}
 
@@ -79,7 +79,7 @@ toc: true
 - 컨텍스트 스위칭 오버헤드가 발생할 수 있으나, 다단계 큐 같은 차등적 시간 할당량 적용으로 문제를 완화할 수 있습니다.
 - 짧은 시간 할당량은 응답성을 높이지만 오버헤드를 증가시키고, 긴 시간 할당량은 FCFS와 유사한 동작을 합니다.
 
-![cpu_scheduler_7.png](/images/posts/cpu_scheduler_7.png)
+![cpu_scheduler_7.png](/images/posts/2025-04-30-cpu-scheduler/cpu_scheduler_7.png)
 
 ## 3. ⚙ 고급 스케줄링 기법 {#advanced-scheduling}
 
@@ -90,7 +90,7 @@ toc: true
 - 각 큐는 시분할(Time Slice) 방식으로 CPU 시간을 분배받아 사용합니다.
 - 다단계 큐는 사용자와 시스템 요구에 맞춰 유연한 스케줄링 정책을 구현할 수 있습니다.
 
-![cpu_scheduler_8.png](/images/posts/cpu_scheduler_8.png)
+![cpu_scheduler_8.png](/images/posts/2025-04-30-cpu-scheduler/cpu_scheduler_8.png)
 
 ## 🏁 마치며 {#conclusion}
 
