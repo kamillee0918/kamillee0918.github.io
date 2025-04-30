@@ -11,12 +11,12 @@ toc: true
 
 무료로 읽을 수 있는 논문들은 주로 [arXiv.org e-Print archive](https://arxiv.org/)에 공개되어 있습니다. 예를 들어, 아래와 같은 논문들을 무료로 읽을 수 있습니다.
 
-**<물체 탐지(object detection)>**
+**[물체 탐지(object detection)]**
 
 - [[1512.02325] SSD: Single Shot MultiBox Detector](https://arxiv.org/abs/1512.02325)
 - [[1612.08242] YOLO9000: Better, Faster, Stronger](https://arxiv.org/abs/1612.08242)
 
-**<word2vec, doc2vec>**
+**[word2vec, doc2vec]**
 
 - [[1301.3781] Efficient Estimation of Word Representations in Vector Space](https://arxiv.org/abs/1301.3781)
 - [[1405.4053] Distributed Representations of Sentences and Documents](https://arxiv.org/abs/1405.4053)

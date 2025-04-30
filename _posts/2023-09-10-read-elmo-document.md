@@ -23,11 +23,11 @@ $$
 \sigma (a) = \frac{1}{1 + \exp(−a)}
 $$
 
-$$\mathbf {a}$$는 평가치이고, KPP 관계의 가중치를 $$\mathbf{w}$$로, 학습 데이터의 KPP 관계의 입력 벡터를 $$\mathbf {x}$$로 설정했을 때의 선형 합은 수식 입니다.
+$\mathbf {a}$는 평가치이고, KPP 관계의 가중치를 $\mathbf{w}$로, 학습 데이터의 KPP 관계의 입력 벡터를 $\mathbf {x}$로 설정했을 때의 선형 합은 수식 입니다.
 
 ※ 대부분의 쇼기 소프트웨어에서는 보(歩) 기물 하나의 가치를 대략 100점으로 설정하기 위해 x축을 스케일링하고 있습니다.
 
-![시그모이드 함수](https://th.bing.com/th/id/OIP.q58sDjMhXtMPQPGxp2Qd9wHaES?pid=ImgDet&rs=1){: .align-center}
+![시그모이드 함수](https://th.bing.com/th/id/OIP.q58sDjMhXtMPQPGxp2Qd9wHaES?pid=ImgDet&rs=1)
 
 평가치가 1000을 넘어가면 거의 이긴 것으로 판단하는 감각과도 일치하기 때문에, 평가치에 따른 승률이 로지스틱 함수를 따른다고 가정하는 것은 납득할 수 있습니다.
 
@@ -39,9 +39,9 @@ $$
 L(\mathbf {w}, \mathbf {X}, \mathbf {t}) = − \sum_{i=1}^{N}(t_i \mathbf {w}^T \mathbf {x}_i − \log(1+\exp(\mathbf {w}^T \mathbf {x}_i)))
 $$
 
-$$\mathbf {X}$$는 학습 데이터의 집합 $$(\mathbf {x}_1, \mathbf {x}_2, \cdots)$$, $$\mathbf {t}$$는 승패(0이나 1) 교사 데이터입니다.
+$\mathbf {X}$는 학습 데이터의 집합 $(\mathbf {x}_1, \mathbf {x}_2, \cdots)$, $\mathbf {t}$는 승패(0이나 1) 교사 데이터입니다.
 
-교차 엔트로피 오차 함수를 파라미터 $$\mathbf {w}$$에 대해 편미분하면
+교차 엔트로피 오차 함수를 파라미터 $\mathbf {w}$에 대해 편미분하면
 
 $$
 \frac{\partial L(\mathbf {w}, \mathbf {X}, \mathbf {t})}{\partial \mathbf {w}} = \sum_{i=1}^{N} \mathbf {x}_i (\sigma (\mathbf {w}^T \mathbf {x}_i) − t_i)
@@ -59,7 +59,7 @@ $$
 L'(\mathbf {w}, \mathbf {X}, \mathbf {t}) = L(\mathbf {w}, \mathbf {X}, \mathbf {t}) + \lambda R(\mathbf {X})
 $$
 
-$$\lambda$$는 정규화 계수이며, $$R(\mathbf {x})$$는 얕은 탐색에 의한 평가치와 깊은 탐색에 의한 평가치의 차이입니다.
+$\lambda$는 정규화 계수이며, $R(\mathbf {x})$는 얕은 탐색에 의한 평가치와 깊은 탐색에 의한 평가치의 차이입니다.
 
 더불어, 정규화 항에 다음 변형을 추가하고 있습니다.
 
@@ -83,9 +83,9 @@ $$
 \frac{\partial H(p,q)}{\partial \mathbf {w}} = \mathbf {x}_i(q − p)
 $$
 
-$$H(p, q)$$의 미분식의 전개 세부사항은 [인용된 자료](https://denou.jp/tournament2016/img/PR/Hakubishin.pdf)를 참조 바랍니다.
+$H(p, q)$의 미분식의 전개 세부사항은 [인용된 자료](https://denou.jp/tournament2016/img/PR/Hakubishin.pdf)를 참조 바랍니다.
 
-로지스틱 함수의 미분이 $$\sigma'(a) = \sigma(a) \sigma(1 − a)$$임을 활용하고 있습니다.
+로지스틱 함수의 미분이 $\sigma'(a) = \sigma(a) \sigma(1 − a)$임을 활용하고 있습니다.
 
 학습 데이터로 사용하는 것은 특정 국면에서 얕은 탐색 결과와 깊은 탐색 결과의 평가치 및 승패 데이터입니다.
 
@@ -101,14 +101,14 @@ elmo는 어필 문서에서 탐색 깊이 6, 약 50억 국면에서 단 한 번 
 
 #### src/usi.cpp (703~719행)
 
-{% highlight cpp %}
+```cpp
 const double eval_winrate = sigmoidWinningRate(eval);
 const double teacher_winrate = sigmoidWinningRate(teacherEval);
 const double t = ( (hcpe.isWin) ? 1.0 : 0.0 ); // mk-takizawa: 이기고 있으면 1, 지고 있으면 0
 
 const double LAMBDA = 0.5; // mk-takizawa: 적당히 변경해주세요.
 const double dsig = (eval_winrate -t) + LAMBDA * (eval_winrate - teacher_winrate);
-{% endhighlight %}
+```
 
 `eval_winrate`는 얕은 탐색의 평가치에 의한 예측 승률이고, `teacher_winrate`는 깊은 탐색의 평가치에 의한 예측 승률이며, `t`는 승패 데이터입니다. `LAMBDA`는 정규화 계수로, 0.5가 사용되었습니다.
 
@@ -118,16 +118,7 @@ const double dsig = (eval_winrate -t) + LAMBDA * (eval_winrate - teacher_winrate
 
 또한, 원래 Apery 소스 코드에서는 얕은 탐색과 깊은 탐색의 평가치에 의한 예측 승률의 제곱 오차가 손실 함수로 사용되었습니다.
 
-[^1]: [GPS将棋](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=9786&item_no=1&page_id=13&block_id=8)
-    - 아래 엔진들도 유사한 특성을 가정하고 사용하고 있습니다.
-    
-    - Ponanza: [https://twitter.com/issei_y/status/589644174275674112](https://twitter.com/issei_y/status/589644174275674112)
-    - 技巧   : [https://github.com/gikou-official/Gikou/blob/master/src/learning.cc](https://github.com/gikou-official/Gikou/blob/master/src/learning.cc)
-    
-    - 그러나 Apery의 평가 함수는 이 점을 직접 평가하지 않아 적절히 설정되지 않았다고 생각됩니다(아래 참조).
-    - [https://twitter.com/Qhapaq_49/status/795257976185442304](https://twitter.com/Qhapaq_49/status/795257976185442304)
-    
-    - elmo의 방법론은 이를 잘 보정하고 있다고 볼 수 있을지도 모릅니다.
+[^1]: [GPS将棋](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=9786&item_no=1&page_id=13&block_id=8)는 이 점을 직접 평가하지 않아 적절히 설정되지 않았다고 생각됩니다.
 
 [^2]: WCSC26의 쇼기 소프트 "激指"을 참고하고 있습니다. 또한, Ponanza가 로지스틱 회귀를 사용하고 있다는 기록이 있습니다(더 이상 사용하지 않을 수도 있습니다).
 
