@@ -72,9 +72,6 @@ sass:
 # Google Analytics tracking
 google_analytics: G-QMW2B664KQ
 
-# Replace this value and uncomment to enable Disqus
-disqus: "kamillee0918-github-io"
-
 # Specify the author for blog posts
 author:
   name: kamillee0918
