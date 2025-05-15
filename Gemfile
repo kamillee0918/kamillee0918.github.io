@@ -10,6 +10,7 @@ group :jekyll_plugins do
   gem "jekyll-sitemap", "~> 1.4.0"
   gem "webrick", "~> 1.8"
   gem "jekyll-minifier", "~> 0.1.10"  # HTML, CSS, and JavaScript minification
+  gem "jekyll-last-modified-at"
 end
 
 group :development do

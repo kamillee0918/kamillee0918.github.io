@@ -15,6 +15,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-minifier
+  - jekyll-last-modified-at
 
 # Minifier settings
 minifier:
