@@ -1,23 +1,58 @@
 ---
 layout: post
 title: "알고리즘 복잡도 분석 - 시간 복잡도와 공간 복잡도"
-author: "kamillee0918"
-categories: [Computer Science, Algorithm]
+date: 2025-08-06 12:00:00 +0900
+last_modified_at: 2025-08-06 12:00:00 +0900
 tags: [CS, Algorithm, Big-O, Time Complexity, Space Complexity, 시간복잡도, 공간복잡도, 빅오]
-image: assets/images/algorithm-complexity.jpg
+toc: true
 ---
+
+## 📑 **Table Of Contents**
+
+- [1. ⚙ 복잡도 분석의 개념](#complexity-basics)
+  - [복잡도 분석의 필요성](#why-complexity-analysis)
+  - [시간 복잡도와 공간 복잡도](#time-space-complexity)
+- [2. ⚙ 시간 복잡도 (Time Complexity)](#time-complexity)
+  - [Big-O 표기법](#big-o-notation)
+  - [주요 시간 복잡도 유형](#time-complexity-types)
+- [3. ⚙ 공간 복잡도 (Space Complexity)](#space-complexity)
+  - [공간 복잡도의 구성 요소](#space-complexity-components)
+  - [주요 공간 복잡도 예시](#space-complexity-examples)
+- [4. ⚙ 시간 복잡도 vs 공간 복잡도](#time-vs-space)
+  - [트레이드오프 관계](#tradeoff-relationship)
+  - [피보나치 수열 예시](#fibonacci-example)
+- [5. ⚙ 복잡도 분석 방법론](#analysis-methodology)
+  - [복잡도 분석 기법](#analysis-techniques)
+  - [실무 적용 가이드라인](#practical-guidelines)
+- [6. ⚙ 실제 개발에서의 적용](#practical-applications)
+- [7. 🏁 마치며](#conclusion)
+
+---
+
+![algorithm-complexity.png](/images/posts/2025-08-06-time-space-complexity/algorithm-complexity.png)
+
+## 1. ⚙ 복잡도 분석의 개념 {#complexity-basics}
+
+### 복잡도 분석의 필요성 {#why-complexity-analysis}
 
 프로그래밍에서 알고리즘을 설계할 때 성능을 측정하는 가장 중요한 지표 중 하나가 바로 **복잡도(Complexity)**입니다. 복잡도는 크게 시간 복잡도와 공간 복잡도로 나누어지며, 이를 통해 알고리즘의 효율성을 객관적으로 평가할 수 있습니다.
 
-## 시간 복잡도 (Time Complexity)
+### 시간 복잡도와 공간 복잡도 {#time-space-complexity}
+
+- **시간 복잡도**: 입력 크기에 따라 알고리즘의 실행 시간이 어떻게 증가하는지를 나타냅니다.
+- **공간 복잡도**: 알고리즘 실행 중 사용되는 메모리 공간이 입력 크기에 따라 어떻게 변하는지를 나타냅니다.
+
+---
+
+## 2. ⚙ 시간 복잡도 (Time Complexity) {#time-complexity}
 
 시간 복잡도는 입력 크기에 따라 알고리즘이 실행되는 시간이 얼마나 증가하는지를 나타내는 지표입니다. 절대적인 실행 시간이 아닌, 입력 크기 n에 대한 상대적인 증가율을 의미합니다.
 
-### Big-O 표기법
+### Big-O 표기법 {#big-o-notation}
 
 시간 복잡도는 주로 **Big-O 표기법**으로 표현됩니다. 이는 최악의 경우(worst case)에서의 성능을 나타냅니다.
 
-#### 주요 시간 복잡도
+### 주요 시간 복잡도 유형 {#time-complexity-types}
 
 1. **O(1) - 상수 시간**
    - 입력 크기와 관계없이 일정한 시간
@@ -90,16 +125,16 @@ image: assets/images/algorithm-complexity.jpg
        return fibonacci(n-1) + fibonacci(n-2)  # O(2^n)
    ```
 
-## 공간 복잡도 (Space Complexity)
+## 3. ⚙ 공간 복잡도 (Space Complexity) {#space-complexity}
 
 공간 복잡도는 알고리즘이 실행되는 동안 사용하는 메모리 공간의 양을 나타냅니다. 입력 크기에 따라 필요한 추가 메모리 공간이 얼마나 증가하는지를 측정합니다.
 
-### 공간 복잡도의 구성 요소
+### 공간 복잡도의 구성 요소 {#space-complexity-components}
 
 1. **고정 공간**: 알고리즘 자체가 사용하는 공간 (코드, 상수, 변수 등)
 2. **가변 공간**: 입력 크기에 따라 달라지는 공간 (동적 할당, 재귀 호출 스택 등)
 
-### 주요 공간 복잡도 예시
+### 주요 공간 복잡도 예시 {#space-complexity-examples}
 
 1. **O(1) - 상수 공간**
    ```python
@@ -133,11 +168,13 @@ image: assets/images/algorithm-complexity.jpg
        # 재귀 호출 깊이가 log n이므로 O(log n) 공간
    ```
 
-## 시간 복잡도 vs 공간 복잡도
+## 4. ⚙ 시간 복잡도 vs 공간 복잡도 {#time-vs-space}
+
+### 트레이드오프 관계 {#tradeoff-relationship}
 
 알고리즘을 설계할 때는 시간과 공간 사이의 **트레이드오프(Trade-off)**를 고려해야 합니다.
 
-### 예시: 피보나치 수열
+### 피보나치 수열 예시 {#fibonacci-example}
 
 1. **재귀 방식** - 시간: O(2^n), 공간: O(n)
 2. **메모이제이션** - 시간: O(n), 공간: O(n)
@@ -169,7 +206,9 @@ def fib_iterative(n):
     return curr
 ```
 
-## 복잡도 분석 팁
+## 5. ⚙ 복잡도 분석 방법론 {#analysis-methodology}
+
+### 복잡도 분석 기법 {#analysis-techniques}
 
 1. **최악의 경우를 고려하라**: Big-O는 최악의 시나리오를 기준으로 합니다.
 
@@ -181,7 +220,19 @@ def fib_iterative(n):
 
 5. **재귀의 깊이와 너비를 분석하라**: 재귀 호출의 패턴을 파악해야 합니다.
 
-## 실제 개발에서의 적용
+### 실무 적용 가이드라인 {#practical-guidelines}
+
+앞서 언급한 분석 기법들은 다음과 같은 상황에서 특히 중요합니다:
+
+1. **최악의 경우를 고려하라**: Big-O는 최악의 시나리오를 기준으로 합니다.
+2. **상수 항은 무시하라**: O(2n)은 O(n)으로, O(n²/2)는 O(n²)로 표현합니다.
+3. **가장 큰 항만 고려하라**: O(n² + n + 1)은 O(n²)입니다.
+4. **중첩 루프를 주의하라**: 이중 반복문은 보통 O(n²)입니다.
+5. **재귀의 깊이와 너비를 분석하라**: 재귀 호출의 패턴을 파악해야 합니다.
+
+---
+
+## 6. ⚙ 실제 개발에서의 적용 {#practical-applications}
 
 복잡도 분석은 다음과 같은 상황에서 중요합니다:
 
@@ -190,7 +241,9 @@ def fib_iterative(n):
 - **메모리 제약 환경**: 임베디드 시스템에서는 공간 복잡도가 중요합니다.
 - **코딩 테스트**: 알고리즘 문제 해결 시 필수적인 분석 도구입니다.
 
-## 마무리
+---
+
+## 7. 🏁 마치며 {#conclusion}
 
 시간 복잡도와 공간 복잡도는 효율적인 알고리즘을 설계하고 선택하는 데 필수적인 개념입니다. 단순히 동작하는 코드를 작성하는 것을 넘어서, 확장 가능하고 성능이 우수한 솔루션을 만들기 위해서는 복잡도 분석이 반드시 필요합니다.
 
