@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 gemspec
+gem "base64"
+gem "bigdecimal"
 
 group :jekyll_plugins do
   gem "jekyll-compose", "~> 0.12.0"
