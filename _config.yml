@@ -1,11 +1,11 @@
 # Setup
-title: Kamil Lee의 인공지능 이야기
-description: 인공지능은 아마도 딥러닝을 통해 인간으로부터 윤리관을 배우리라.
+title: Kamil Lee의 개발 일기
+description: 일본 장기 AI와 개발 관련 이야기를 중심으로 정리하고 있습니다.
 url: https://kamillee0918.github.io
 avatar: /avatar.png
 paginate: 10
 permalink: pretty
-cover_image: /bg.jpg
+cover_image: /bg.png
 
 # Gems
 plugins:
